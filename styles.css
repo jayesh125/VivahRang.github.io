@@ -61,7 +61,6 @@ a {
 .fixed-whatsapp {
     position: fixed;
     bottom: 20px;
-    right: 200px; /* Adjust the position according to your layout */
     background-color: #25D366;
     color: #ffffff;
     padding: 10px 15px;
