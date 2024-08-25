@@ -41,7 +41,7 @@ a {
     text-align: center;
     aspect-ratio: 1;
     clip-path: polygon(100% 50%, 78.98% 57.76%, 93.3% 75%, 71.21% 71.21%, 75% 93.3%, 57.76% 78.98%, 50% 100%, 42.24% 78.98%, 25% 93.3%, 28.79% 71.21%, 6.7% 75%, 21.02% 57.76%, 0% 50%, 21.02% 42.24%, 6.7% 25%, 28.79% 28.79%, 25% 6.7%, 42.24% 21.02%, 50% 0%, 57.76% 21.02%, 75% 6.7%, 71.21% 28.79%, 93.3% 25%, 78.98% 42.24%);
-    animation: pulseEffect 3s ease-in-out infinite;
+    animation: pulseEffect 1s ease-in-out infinite;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -55,6 +55,34 @@ a {
         transform: scale(1.05);
         background-color: #ff5722; /* Slightly brighter color on pulse */
     }
+}
+
+/* Fixed WhatsApp button */
+.fixed-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 200px; /* Adjust the position according to your layout */
+    background-color: #25D366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.fixed-whatsapp:hover {
+    background-color: #20b158; /* Darker shade on hover */
+}
+
+.fixed-whatsapp i {
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 /* Navbar Styles */
