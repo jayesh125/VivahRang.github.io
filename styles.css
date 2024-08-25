@@ -1,0 +1,513 @@
+/* css to reset all the designs */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Container for the fixed text */
+.fixed-notice {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #ac0505;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1;
+    clip-path: polygon(100% 50%, 78.98% 57.76%, 93.3% 75%, 71.21% 71.21%, 75% 93.3%, 57.76% 78.98%, 50% 100%, 42.24% 78.98%, 25% 93.3%, 28.79% 71.21%, 6.7% 75%, 21.02% 57.76%, 0% 50%, 21.02% 42.24%, 6.7% 25%, 28.79% 28.79%, 25% 6.7%, 42.24% 21.02%, 50% 0%, 57.76% 21.02%, 75% 6.7%, 71.21% 28.79%, 93.3% 25%, 78.98% 42.24%);
+    animation: myAnim 2s ease-in 0s infinite alternate-reverse backwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adding subtle shadow */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition on scroll */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Hover Effect */
+.navbar:hover {
+    background-color: #f7f7f7;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+}
+
+/* Hamburger Bar Styling */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #000000;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-right: 30%;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #fd8100;
+    /* Change to your preferred color */
+}
+
+/* Glowing Register Button */
+#register-link {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #fd8100;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #fd8100, 0 0 20px #fd8100, 0 0 10px #fd8100;
+    transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+#register-link:hover {
+    background-color: #ff8c00;
+    box-shadow: 0 0 15px #ff8c00, 0 0 25px #ff8c00, 0 0 35px #ff8c00;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    width: 90px;
+    height: 60px;
+}
+
+/* Responsive Navbar */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        margin-top: 20px;
+        flex-direction: column;
+        background-color: #222;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 1.6rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* Make the image responsive */
+.container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Style the button and place it at the bottom-right with margin */
+.container .btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background-color: #fd8100;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translate(0%, 0%);
+    border: 1px transparent;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+}
+
+@-webkit-keyframes glowing {
+    0% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 3px #fd8100;
+    }
+
+    50% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 15px #fd8100;
+    }
+
+    100% {
+        background-color: #fd7200;
+        -webkit-box-shadow: 0 0 3px #fd7200;
+    }
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 3px #fd8100;
+    }
+
+    50% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 15px #fd8100;
+    }
+
+    100% {
+        background-color: #fd7200;
+        -webkit-box-shadow: 0 0 3px #fd7200;
+    }
+}
+
+/* Adjust button styles for different screen sizes */
+@media (max-width: 768px) {
+    .container .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+/* Custom CSS for the container */
+.about-section {
+    background: linear-gradient(135deg, #ff4657, rgb(191, 49, 89));
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Head section with title */
+.head {
+    padding: 10px;
+    background: linear-gradient(125deg, #fd8100, #82224d);
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.head::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 20%);
+    background-size: 50px 50px;
+    animation: bgMove 10s linear infinite;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100px;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #fd8100;
+    }
+
+    100% {
+        background-color: rgb(191, 49, 89);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.title-text {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 100;
+}
+
+/* Content section */
+.content {
+    background: #fff7e6;
+    /* Light color background */
+    color: #333;
+    /* Dark text color for contrast */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content p:first-of-type {
+    font-weight: bold;
+    /* Highlight the Marathi text */
+}
+
+/* Styling for h4 elements */
+h4 {
+    font-size: 1.8rem;
+    /* Adjust font size */
+    color: #fd8100;
+    /* Use the primary color */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Optional: Make the text uppercase */
+    border-left: 5px solid rgb(191, 49, 89);
+    /* Add a border for emphasis */
+    padding-left: 10px;
+    /* Space between border and text */
+}
+
+.img-4 {
+    background-color: #fff7e6;
+}
+
+/* Register Now Button with Sliding Underline Effect */
+.register-button {
+    border: 1px transparent;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+}
+
+@-webkit-keyframes glowing {
+    0% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 3px #fd8100;
+    }
+
+    50% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 15px #fd8100;
+    }
+
+    100% {
+        background-color: #fd7200;
+        -webkit-box-shadow: 0 0 3px #fd7200;
+    }
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 3px #fd8100;
+    }
+
+    50% {
+        background-color: #fd8100;
+        -webkit-box-shadow: 0 0 15px #fd8100;
+    }
+
+    100% {
+        background-color: #fd7200;
+        -webkit-box-shadow: 0 0 3px #fd7200;
+    }
+}
+
+#term {
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 20px;
+    color: #82224d;
+    font-weight: bold;
+    border-bottom: 1px solid #82224d;
+    padding-bottom: 10px;
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#term li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #82224d;
+    font-size: 2rem;
+}
