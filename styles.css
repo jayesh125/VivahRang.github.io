@@ -64,11 +64,8 @@ a {
     right: 200px; /* Adjust the position according to your layout */
     background-color: #25D366;
     color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
     padding: 10px 15px;
     border-radius: 50px;
-    text-decoration: none;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -81,8 +78,7 @@ a {
 }
 
 .fixed-whatsapp i {
-    font-size: 20px;
-    margin-right: 10px;
+    font-size: 25px;
 }
 
 /* Navbar Styles */
