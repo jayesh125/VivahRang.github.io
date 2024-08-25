@@ -28,11 +28,11 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 150px;
-    height: 150px;
-    background-color: #ac0505;
-    color: white;
-    font-size: 10px;
+    width: 160px;
+    height: 160px;
+    background-color: #fd8100; /* Updated background color */
+    color: #ffffff; /* White text color for contrast */
+    font-size: 11px; /* Slightly increased font size for better readability */
     font-weight: bold;
     z-index: 1000;
     display: flex;
@@ -41,36 +41,20 @@ a {
     text-align: center;
     aspect-ratio: 1;
     clip-path: polygon(100% 50%, 78.98% 57.76%, 93.3% 75%, 71.21% 71.21%, 75% 93.3%, 57.76% 78.98%, 50% 100%, 42.24% 78.98%, 25% 93.3%, 28.79% 71.21%, 6.7% 75%, 21.02% 57.76%, 0% 50%, 21.02% 42.24%, 6.7% 25%, 28.79% 28.79%, 25% 6.7%, 42.24% 21.02%, 50% 0%, 57.76% 21.02%, 75% 6.7%, 71.21% 28.79%, 93.3% 25%, 78.98% 42.24%);
-    animation: myAnim 2s ease-in 0s infinite alternate-reverse backwards;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulseEffect 3s ease-in-out infinite;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes myAnim {
-	0% {
-		animation-timing-function: ease-out;
-		transform: scale(1);
-		transform-origin: center center;
-	}
-
-	10% {
-		animation-timing-function: ease-in;
-		transform: scale(0.91);
-	}
-
-	17% {
-		animation-timing-function: ease-out;
-		transform: scale(0.98);
-	}
-
-	33% {
-		animation-timing-function: ease-in;
-		transform: scale(0.87);
-	}
-
-	45% {
-		animation-timing-function: ease-out;
-		transform: scale(1);
-	}
+/* Keyframe animation for a smoother pulse effect */
+@keyframes pulseEffect {
+    0%, 100% {
+        transform: scale(1);
+        background-color: #fd8100; /* Initial background color */
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #ff5722; /* Slightly brighter color on pulse */
+    }
 }
 
 /* Navbar Styles */
